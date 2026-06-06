@@ -1,5 +1,8 @@
 import { z } from "zod";
 
+// Run this function on the Edge runtime on Vercel
+export const config = { runtime: "edge" };
+
 const schema = z.object({
   pickup: z.string().min(1).max(100),
   drop: z.string().min(1).max(100),
