@@ -1,0 +1,19 @@
+# Saudia Transportation
+
+> Trusted taxi and private transfer service across Saudi Arabia — Umrah pilgrims, tourists, and locals. Routes between Jeddah, Makkah, Madinah, and Taif with sedans, SUVs, and vans.
+
+Saudia Transportation provides on-demand and pre-booked private rides with English-speaking drivers, fixed transparent pricing, and instant WhatsApp booking. Specialized in airport pickups, Umrah transport, intercity transfers, and hourly chauffeur service.
+
+## Pages
+
+- [Home](/): Overview of services, fleet, and instant WhatsApp booking.
+- [Book A Taxi](/book): Vehicle selection and route pricing for booking a ride.
+- [Our Services](/services): Airport transfers, Umrah transport, intercity, and hourly chauffeur services.
+- [Pricing](/pricing): Fixed-rate fares per vehicle and route, plus hourly rates.
+- [About Us](/about): Company background, values, and what makes the service trusted.
+- [Contact Us](/contact): Phone, WhatsApp, email, and service area details.
+
+## Optional
+
+- [Sitemap](/sitemap.xml): Full list of indexable URLs.
+- [Robots](/robots.txt): Crawler rules.

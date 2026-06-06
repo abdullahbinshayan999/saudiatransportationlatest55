@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gulf-transport-hub.lovable.app/sitemap.xml
