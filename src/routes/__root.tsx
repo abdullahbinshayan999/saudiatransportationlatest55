@@ -1,4 +1,5 @@
 import { Outlet, Link, createRootRoute, useRouter } from "@tanstack/react-router";
+import { Helmet } from "react-helmet-async";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/WhatsAppButton";
@@ -109,6 +110,23 @@ export const Route = createRootRoute({
 function RootComponent() {
   return (
     <div className="flex min-h-screen flex-col bg-background">
+      <Helmet>
+        <title>Saudia Transportation | Premium Umrah Taxi Service in Saudi Arabia</title>
+        <meta name="description" content="Book reliable Umrah taxi services in Saudi Arabia. Premium Makkah, Madinah, Jeddah airport and hotel transfers, Ziyarat tours, and private rides with fixed pricing." />
+        <link rel="canonical" href="https://saudiatransportation.com/" />
+
+        <meta property="og:title" content="Saudia Transportation | Premium Umrah Taxi Service in Saudi Arabia" />
+        <meta property="og:description" content="Book reliable Umrah taxi services in Saudi Arabia. Premium Makkah, Madinah, Jeddah airport and hotel transfers, Ziyarat tours, and private rides with fixed pricing." />
+        <meta property="og:url" content="https://saudiatransportation.com/" />
+        <meta property="og:type" content="website" />
+
+        <script type="application/ld+json">{`{
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Saudia Transportation",
+          "url": "https://saudiatransportation.com"
+        }`}</script>
+      </Helmet>
       <Header />
       <main className="flex-1">
         <Outlet />
