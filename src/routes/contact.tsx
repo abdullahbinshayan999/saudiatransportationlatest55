@@ -364,7 +364,7 @@ function ContactPage() {
                       type="tel"
                       value={form.whatsapp}
                       onChange={update("whatsapp")}
-                      placeholder="+966 5X XXX XXXX"
+                      placeholder="+1 (872) 322-8435"
                       className={inputCls}
                     />
                     {errors.whatsapp && <span className={errCls}>{errors.whatsapp}</span>}

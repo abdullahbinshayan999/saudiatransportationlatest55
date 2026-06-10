@@ -1,11 +1,11 @@
 export const site = {
   name: "Saudia Transportation",
   domain: "saudiatransportation.com",
-  phone: "+966 5X XXX XXXX",
-  phoneHref: "tel:+9665XXXXXXXX",
+  phone: "+1 (872) 322-8435",
+  phoneHref: "tel:+18723228435",
   email: "info.saudiatransportation@gmail.com",
   emailHref: "mailto:info.saudiatransportation@gmail.com",
-  whatsappNumber: "9665XXXXXXXX", // digits only for wa.me
+  whatsappNumber: "18723228435", // digits only for wa.me
   defaultMessage: "Hello, I want to book a taxi. Please share details.",
   tagline: "Serving pilgrims with safe and reliable transport",
 };
