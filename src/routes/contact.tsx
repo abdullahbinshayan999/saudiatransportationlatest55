@@ -1,4 +1,5 @@
 import { createFileRoute, useLocation } from "@tanstack/react-router";
+import { Helmet } from "react-helmet-async";
 import { useEffect, useState } from "react";
 import { Phone, Mail, Send, CheckCircle2, Loader2 } from "lucide-react";
 import { z } from "zod";
@@ -7,14 +8,6 @@ import { toast } from "sonner";
 import { PageHeader } from "./book";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Get Your Ride Quote — Saudia Transportation" },
-      { name: "description", content: "Book your taxi in Saudi Arabia in seconds. Pickup, drop-off, vehicle type — get instant pricing & confirmation on WhatsApp." },
-      { property: "og:title", content: "Get Your Ride Quote — Saudia Transportation" },
-      { property: "og:description", content: "Instant taxi quote on WhatsApp. Fixed pricing, professional drivers, 24/7 service." },
-    ],
-  }),
   component: ContactPage,
 });
 
@@ -172,6 +165,21 @@ function ContactPage() {
 
   return (
     <>
+      <Helmet>
+        <title>Contact Us | Saudia Transportation</title>
+        <meta
+          name="description"
+          content="Contact Saudia Transportation for Umrah taxi bookings, Makkah and Madinah transfers, airport pickups, hotel transport, and private Saudi travel services."
+        />
+        <link rel="canonical" href="https://saudiatransportation.com/contact" />
+        <meta property="og:title" content="Contact Us | Saudia Transportation" />
+        <meta
+          property="og:description"
+          content="Contact Saudia Transportation for Umrah taxi bookings, Makkah and Madinah transfers, airport pickups, hotel transport, and private Saudi travel services."
+        />
+        <meta property="og:url" content="https://saudiatransportation.com/contact" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <PageHeader
         eyebrow="Get Your Ride Quote"
         title="Book Your Ride in Seconds"
