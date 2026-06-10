@@ -202,7 +202,7 @@ function ContactPage() {
                 </a>
               </li>
               <li className="rounded-2xl border bg-card p-5 shadow-card">
-                <a href={site.emailHref} className="flex items-center gap-3">
+                <a href="mailto:info@saudiatransportation.com" className="flex items-center gap-3">
                   <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gold text-gold-foreground">
                     <Mail className="h-5 w-5" />
                   </span>
@@ -210,7 +210,7 @@ function ContactPage() {
                     <div className="text-xs font-bold uppercase tracking-wider text-foreground/70">
                       Email
                     </div>
-                    <div className="font-display text-base font-bold break-all">{site.email}</div>
+                    <div className="font-display text-base font-bold break-all">info@saudiatransportation.com</div>
                   </div>
                 </a>
               </li>

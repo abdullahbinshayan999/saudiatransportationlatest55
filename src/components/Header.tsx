@@ -34,8 +34,8 @@ export function Header() {
           <a href={site.phoneHref} className="inline-flex items-center gap-2 hover:text-gold">
             <Phone className="h-3.5 w-3.5" /> {site.phone}
           </a>
-          <a href={site.emailHref} className="inline-flex items-center gap-2 hover:text-gold">
-            <Mail className="h-3.5 w-3.5" /> {site.email}
+          <a href="mailto:info@saudiatransportation.com" className="inline-flex items-center gap-2 hover:text-gold">
+            <Mail className="h-3.5 w-3.5" /> info@saudiatransportation.com
           </a>
         </div>
       </div>

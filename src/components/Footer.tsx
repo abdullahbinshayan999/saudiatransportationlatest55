@@ -36,7 +36,7 @@ export function Footer() {
           <h4 className="font-display text-base font-bold text-gold">Contact</h4>
           <ul className="mt-4 space-y-3 text-sm text-primary-foreground/95">
             <li className="flex items-start gap-2"><Phone className="mt-0.5 h-4 w-4 text-gold" /><a href={site.phoneHref}>{site.phone}</a></li>
-            <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4 text-gold" /><a href={site.emailHref}>{site.email}</a></li>
+            <li className="flex items-start gap-2"><Mail className="mt-0.5 h-4 w-4 text-gold" /><a href="mailto:info@saudiatransportation.com">info@saudiatransportation.com</a></li>
             <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-gold" /><span>Saudi Arabia</span></li>
           </ul>
         </div>
