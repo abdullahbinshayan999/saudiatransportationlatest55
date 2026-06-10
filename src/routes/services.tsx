@@ -1,17 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Helmet } from "react-helmet-async";
 import { Car, Plane, Hotel, MapPin, Users } from "lucide-react";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { PageHeader } from "./book";
 
 export const Route = createFileRoute("/services")({
-  head: () => ({
-    meta: [
-      { title: "Our Services — Saudia Transportation" },
-      { name: "description", content: "Umrah transport, airport transfers, hotel transfers, Ziyarat tours and private family transport across Saudi Arabia." },
-      { property: "og:title", content: "Our Services — Saudia Transportation" },
-      { property: "og:description", content: "Comprehensive taxi services across Saudi Arabia for pilgrims, tourists and locals." },
-    ],
-  }),
   component: ServicesPage,
 });
 
@@ -26,6 +19,21 @@ const services = [
 function ServicesPage() {
   return (
     <>
+      <Helmet>
+        <title>Our Services | Saudia Transportation</title>
+        <meta
+          name="description"
+          content="Explore reliable transportation services across Saudi Arabia including Umrah taxi, Makkah & Madinah transfers, airport & hotel pickups, Ziyarat tours, and private rides."
+        />
+        <link rel="canonical" href="https://saudiatransportation.com/services" />
+        <meta property="og:title" content="Our Services | Saudia Transportation" />
+        <meta
+          property="og:description"
+          content="Explore reliable transportation services across Saudi Arabia including Umrah taxi, Makkah & Madinah transfers, airport & hotel pickups, Ziyarat tours, and private rides."
+        />
+        <meta property="og:url" content="https://saudiatransportation.com/services" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <PageHeader
         eyebrow="Our Services"
         title="Premium transport for every journey"
