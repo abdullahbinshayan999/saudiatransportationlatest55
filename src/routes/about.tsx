@@ -1,17 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Helmet } from "react-helmet-async";
 import { ShieldCheck, Heart, UserCheck, Sparkles } from "lucide-react";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { PageHeader } from "./book";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About Us — Saudia Transportation" },
-      { name: "description", content: "We serve Umrah pilgrims, tourists and locals across Saudi Arabia with safe, reliable, and professional taxi service." },
-      { property: "og:title", content: "About Saudia Transportation" },
-      { property: "og:description", content: "Trusted, customer-first taxi service across Saudi Arabia." },
-    ],
-  }),
   component: AboutPage,
 });
 
@@ -25,6 +18,21 @@ const pillars = [
 function AboutPage() {
   return (
     <>
+      <Helmet>
+        <title>About Us | Saudia Transportation</title>
+        <meta
+          name="description"
+          content="Learn about Saudia Transportation, providing safe, reliable, and comfortable Umrah taxi services, airport transfers, and private transport across Saudi Arabia."
+        />
+        <link rel="canonical" href="https://saudiatransportation.com/about" />
+        <meta property="og:title" content="About Us | Saudia Transportation" />
+        <meta
+          property="og:description"
+          content="Learn about Saudia Transportation, providing safe, reliable, and comfortable Umrah taxi services, airport transfers, and private transport across Saudi Arabia."
+        />
+        <meta property="og:url" content="https://saudiatransportation.com/about" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <PageHeader
         eyebrow="About Us"
         title="Trusted transport, built around the people who travel with us"
