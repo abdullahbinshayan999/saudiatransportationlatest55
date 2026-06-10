@@ -1,23 +1,31 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Helmet } from "react-helmet-async";
 import { VehicleCard } from "@/components/VehicleCard";
 import { PricingTable } from "@/components/PricingTable";
 import { vehicles } from "@/lib/vehicles";
 
 export const Route = createFileRoute("/book")({
-  head: () => ({
-    meta: [
-      { title: "Book A Taxi — Saudia Transportation" },
-      { name: "description", content: "Choose from sedans, vans, SUVs and coasters. Fixed pricing for Umrah, airport, and Ziyarat transport. Book on WhatsApp." },
-      { property: "og:title", content: "Book A Taxi — Saudia Transportation" },
-      { property: "og:description", content: "Browse our fleet and view fixed-price routes. Instant booking on WhatsApp." },
-    ],
-  }),
   component: BookPage,
 });
 
 function BookPage() {
   return (
     <>
+      <Helmet>
+        <title>Book A Taxi | Saudia Transportation</title>
+        <meta
+          name="description"
+          content="Book your Umrah taxi in Saudi Arabia with Saudia Transportation. Get reliable Makkah, Madinah, airport, and hotel transfers with professional drivers and fixed pricing."
+        />
+        <link rel="canonical" href="https://saudiatransportation.com/book" />
+        <meta property="og:title" content="Book A Taxi | Saudia Transportation" />
+        <meta
+          property="og:description"
+          content="Book your Umrah taxi in Saudi Arabia with Saudia Transportation. Get reliable Makkah, Madinah, airport, and hotel transfers with professional drivers and fixed pricing."
+        />
+        <meta property="og:url" content="https://saudiatransportation.com/book" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <PageHeader
         eyebrow="Book A Taxi"
         title="Find the right vehicle for your journey"
