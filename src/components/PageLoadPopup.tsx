@@ -8,8 +8,8 @@ export function PageLoadPopup() {
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (sessionStorage.getItem("sts_popup_seen")) return;
-    const t = setTimeout(() => setOpen(true), 1200);
-    return () => clearTimeout(t);
+    const timeoutId = window.setTimeout(() => setOpen(true), 10000);
+    return () => window.clearTimeout(timeoutId);
   }, []);
 
   const close = () => {
