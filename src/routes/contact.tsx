@@ -19,10 +19,21 @@ const LOCATIONS = [
   "Jeddah Hotel",
   "Train Station (Makkah)",
   "Train Station (Madinah)",
+  "Makkah Ziyarat",
+  "Madinah Ziyarat",
+  "Madinah Ziyarat & Wadi-e-Jinn",
+  "Hourly Rates for Shopping, Ziyarat & Visits",
   "Riyadh",
   "Dammam",
   "Taif",
   "AlUla",
+] as const;
+
+const NO_DROPOFF_LOCATIONS = [
+  "Makkah Ziyarat",
+  "Madinah Ziyarat",
+  "Madinah Ziyarat & Wadi-e-Jinn",
+  "Hourly Rates for Shopping, Ziyarat & Visits",
 ] as const;
 
 const PASSENGERS = [
@@ -58,7 +69,7 @@ const VEHICLES = [
 const schema = z
   .object({
     pickup: z.string().min(1, "Please select pickup"),
-    drop: z.string().min(1, "Please select drop-off"),
+    drop: z.string().optional(),
     date: z.string().min(1, "Date is required"),
     time: z.string().min(1, "Time is required"),
     passengers: z.string().min(1, "Required"),
@@ -76,7 +87,11 @@ const schema = z
       .refine((v) => !v || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v), "Enter a valid email"),
     notes: z.string().trim().max(600).optional(),
   })
-  .refine((d) => d.pickup !== d.drop, {
+  .refine((d) => NO_DROPOFF_LOCATIONS.includes(d.pickup as any) || d.drop, {
+    message: "Please select drop-off",
+    path: ["drop"],
+  })
+  .refine((d) => NO_DROPOFF_LOCATIONS.includes(d.pickup as any) || d.pickup !== d.drop, {
     message: "Pickup and drop-off cannot be the same",
     path: ["drop"],
   });
@@ -111,6 +126,12 @@ function ContactPage() {
       }
     }
   }, [location.hash]);
+
+  useEffect(() => {
+    if (NO_DROPOFF_LOCATIONS.includes(form.pickup as any)) {
+      setForm((f) => ({ ...f, drop: "" }));
+    }
+  }, [form.pickup]);
 
   const update =
     (k: keyof Form) =>
@@ -288,7 +309,12 @@ function ContactPage() {
                     <span className={labelCls}>
                       Drop-off Location <span className="text-destructive">*</span>
                     </span>
-                    <select value={form.drop} onChange={update("drop")} className={inputCls}>
+                    <select
+                      value={form.drop}
+                      onChange={update("drop")}
+                      disabled={NO_DROPOFF_LOCATIONS.includes(form.pickup as any)}
+                      className={`${inputCls} ${NO_DROPOFF_LOCATIONS.includes(form.pickup as any) ? "cursor-not-allowed opacity-50" : ""}`}
+                    >
                       <option value="">Select drop-off…</option>
                       {LOCATIONS.map((l) => (
                         <option key={l} value={l} disabled={l === form.pickup}>
