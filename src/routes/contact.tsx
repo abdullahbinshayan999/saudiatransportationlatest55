@@ -47,11 +47,12 @@ const PASSENGERS = [
 ] as const;
 
 const VEHICLES = [
-  "4 Seater (Camry / Sonata)",
-  "7 Seater (Staria)",
-  "11 Seater (Hiace)",
-  "7 Seater (GMC / Chevrolet)",
-  "18 Seater (Coaster)",
+  "Private Camry / Sonata (4 Seater)",
+  "Private Hyundai Staria / H1 (7 Seater)",
+  "Private Toyota Hiace (11 Seater)",
+  "Private GMC – Luxury Class (7 Seater)",
+  "Private Chevrolet – Luxury Class (7 Seater)",
+  "Private Toyota Coaster (18 Seater)",
 ] as const;
 
 const schema = z
