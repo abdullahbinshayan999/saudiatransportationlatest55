@@ -36,6 +36,20 @@ const NO_DROPOFF_LOCATIONS = [
   "Hourly Rates for Shopping, Ziyarat & Visits",
 ] as const;
 
+const DROP_OFF_LOCATIONS = [
+  "Madina Airport",
+  "Madina Hotel",
+  "Makkah Hotel",
+  "Jeddah Airport",
+  "Jeddah Hotel",
+  "Train Station (Makkah)",
+  "Train Station (Madinah)",
+  "Riyadh",
+  "Dammam",
+  "Taif (With Return)",
+  "AlUla (With Return)",
+] as const;
+
 const PASSENGERS = [
   "1 Passenger",
   "2 Passengers",
@@ -316,7 +330,7 @@ function ContactPage() {
                       className={`${inputCls} ${NO_DROPOFF_LOCATIONS.includes(form.pickup as any) ? "cursor-not-allowed opacity-50" : ""}`}
                     >
                       <option value="">Select drop-off…</option>
-                      {LOCATIONS.map((l) => (
+                      {DROP_OFF_LOCATIONS.map((l) => (
                         <option key={l} value={l} disabled={l === form.pickup}>
                           {l}
                         </option>
