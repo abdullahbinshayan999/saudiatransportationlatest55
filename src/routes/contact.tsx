@@ -25,7 +25,26 @@ const LOCATIONS = [
   "AlUla",
 ] as const;
 
-const PASSENGERS = ["1–3", "4–6", "7–10", "11–15", "15+"] as const;
+const PASSENGERS = [
+  "1 Passenger",
+  "2 Passengers",
+  "3 Passengers",
+  "4 Passengers",
+  "5 Passengers",
+  "6 Passengers",
+  "7 Passengers",
+  "8 Passengers",
+  "9 Passengers",
+  "10 Passengers",
+  "11 Passengers",
+  "12 Passengers",
+  "13 Passengers",
+  "14 Passengers",
+  "15 Passengers",
+  "16 Passengers",
+  "17 Passengers",
+  "18 Passengers",
+] as const;
 
 const VEHICLES = [
   "4 Seater (Camry / Sonata)",
